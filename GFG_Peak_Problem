@@ -1,4 +1,8 @@
+Link of the Question:-
 https://practice.geeksforgeeks.org/problems/peak-element/1
+
+
+SOLUTION:-
 
 class Solution:   
     def peakElement(self,arr, n):
