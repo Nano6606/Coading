@@ -1,0 +1,50 @@
+QUESTION LINK:-
+https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=leaders-in-an-array
+
+SOLUTION 1:-
+
+class Solution {
+public:
+    vector<int> leaders(int n, int arr[]) {
+        vector<int> result;
+        if (n == 0) return result;
+        
+        int max_right = arr[n-1];
+        result.push_back(max_right);
+        
+        for (int i = n - 2; i >= 0; i--) {
+            if (arr[i] >= max_right) {
+                max_right = arr[i];
+                result.push_back(max_right);
+            }
+        }
+        
+        reverse(result.begin(), result.end());
+        
+        return result;
+    }
+};
+
+
+
+
+SOLUTION 2:-
+
+class Solution {
+public:
+    vector<int> leaders(int n, int arr[]) {
+        vector<int> result;
+        if (n == 0) return result;
+        int max_from_right = arr[n - 1];
+        result.push_back(max_from_right);
+        for (int i = n - 2; i >= 0; --i) {
+            if (arr[i] >= max_from_right) {
+                result.push_back(arr[i]);
+                max_from_right = arr[i];
+            }
+        }
+        reverse(result.begin(), result.end());
+
+        return result;
+    }
+};
