@@ -1,0 +1,35 @@
+QUESTION LINK:-
+https://www.geeksforgeeks.org/problems/java-switch-case-statement3529/1
+
+
+SOLUTION:- 
+
+#include <vector>
+#include <cmath>   
+using namespace std;
+
+class Solution {
+public:
+    double switchCase(int choice, vector<double> &arr) {
+        double result = 0.0; 
+
+        switch (choice) {
+            case 1: {
+                double R = arr[0];
+                result = M_PI * R * R;
+                break;
+            }
+            case 2: {
+                double L = arr[0];
+                double B = arr[1];
+                result = L * B;
+                break;
+            }
+            default: {
+                result = -1
+                break;
+            }
+        }
+        return result;
+    }
+};
